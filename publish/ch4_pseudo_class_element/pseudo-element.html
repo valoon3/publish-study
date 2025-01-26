@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pseudo</title>
+  <style>
+    li {
+      float: left;
+      margin-right: 30px;
+      font-size: 32px;
+      list-style-type: none;
+    }
+
+    li:first-of-type::before {
+      content: "start:";
+    }
+
+    li::after {
+        content: " | ";
+    }
+
+    li:last-of-type::after {
+        content: "";
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+  </ul>
+</body>
+</html>
