@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>grid</title>
+    <style>
+        .grid1 {
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+        }
+
+        .grid2 {
+            display: grid;
+            grid-template-columns: 100px 100px 200px;
+            margin-top: 30px;
+        }
+
+        .grid3 {
+            display: grid;
+            grid-template-columns: 100px 1fr 2fr;
+            margin-top: 30px;
+        }
+
+        .grid-container {
+            margin-top: 3rem;
+            display: grid;
+            background-color: antiquewhite;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+            padding: 10px;
+        }
+
+        .grid-item1 {
+            background-color: lightblue;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    </style>
+</head>
+<body>
+<div class="grid1">
+    <div style="background-color: lightblue">div 1</div>
+    <div style="background-color: lightpink">div 2</div>
+</div>
+
+<div class="grid2">
+    <div style="background-color: lightblue">div 1</div>
+    <div style="background-color: lightpink">div 2</div>
+    <div style="background-color: lightblue">div 3</div>
+</div>
+
+<div class="grid3">
+    <div style="background-color: lightblue">div 1</div>
+    <div style="background-color: lightpink">div 2</div>
+    <div style="background-color: lightblue">div 3</div>
+</div>
+
+<div class="grid-container">
+    <div style="background-color: lightblue" class="grid-item1">div 1</div>
+    <div style="background-color: lightpink">div 2</div>
+    <div style="background-color: lightblue">div 3</div>
+    <div style="background-color: lightblue">div 4</div>
+    <div style="background-color: lightblue">div 5</div>
+    <div style="background-color: lightblue">div 6</div>
+    <div style="background-color: lightblue">div 7</div>
+    <div style="background-color: lightblue">div 8</div>
+    <div style="background-color: lightblue">div 9</div>
+</div>
+</body>
+</html>
