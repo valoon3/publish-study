@@ -1,0 +1,167 @@
+.header {
+    height: 55px;
+
+    display: flex;
+    /* 가로 정렬 */
+    flex-direction: row;
+    /* 양방향 정렬 */
+    justify-content: space-between;
+
+    position: fixed; /* 상단 고정을 위함 */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    background-color: #212121FF;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #4D4D4D;
+}
+
+.left-section {
+    display: flex;
+    /* 높이를 중앙으로 맞춰주기 위함 */
+    align-items: center;
+}
+
+.hamburger-menu {
+    /* 이미지의 크기 지정 */
+    height: 24px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.youtube-logo {
+    height: 70px;
+}
+
+.middle-section {
+    /* 빈공간을 모두 채우기 위함 */
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.search-button {
+    height: 40px;
+    width: 66px;
+    background-color: #323232;
+    border: 1px solid #4D4D4D;
+    margin-left: -1px;
+    margin-right: 10px;
+}
+
+.search-bar {
+    height: 36px;
+    padding-left: 10px;
+    font-size: 16px;
+    border: 1px solid #4D4D4D;
+    border-radius: 2px;
+    background-color: #121212;
+    flex: 1;
+}
+
+.search-bar::placeholder {
+    font-size: 16px;
+}
+
+.search-icon {
+    height: 25px;
+}
+
+
+.search-button,
+.voice-search-button,
+.upload-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-icon-container .tooltip {
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding: 4px 8px 4px 8px;
+    bottom: -30px;
+    border-radius: 2px;
+    font-size: 12px;
+    opacity: 0;
+    /**
+        투명하다가 호버 페이드 인/아웃 을 할때 사용된다
+     */
+    transition: opacity 0.15s;
+    white-space: nowrap;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip {
+    opacity: 1;
+}
+
+
+
+.voice-search-button {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: #121212;
+}
+
+.voice-search-icon {
+    height: 24px;
+}
+
+
+.upload-icon {
+    height: 24px;
+}
+
+.youtube-apps-icon {
+    height: 24px;
+}
+
+.notifications-icon {
+    height: 24px;
+}
+
+.current-user-picture {
+    height: 32px;
+    border-radius: 16px;
+}
+
+.right-section {
+    width: 180px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notifications-icon-container {
+    position: relative;
+}
+
+.notifications-count {
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    background-color: rgb(200, 0, 0);
+    color: white;
+    font-size: 11px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;
+}
