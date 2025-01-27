@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position css</title>
+    <style>
+        .box-container {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #669966;
+        }
+
+        .box-container div {
+            padding: 10px;
+            border: 1px solid green;
+            background-color: #ffdddd;
+        }
+
+        #static-box {
+            position: static;
+            top: 20px; /* static 이기 때문에 위치가 영향을 받지 않는다 */
+            left: 30px;
+        }
+
+        #relative-box {
+            position: relative;
+            /*
+                원 위치를 중심으로 이동한다
+            */
+            top: 20px;
+            left: 30px;
+        }
+
+        #absolute-box {
+            position: absolute;
+            /*
+                relative 를 기준으로 이동한다
+                absolute 는 보통 relative 안쪽에 사용한다
+                (부모 속성에 relative 가 없다면 body 를 기준으로 이동한다)
+            */
+            top: 20px;
+            left: 30px;
+        }
+
+        #fixed-box {
+            position: fixed;
+            /*
+                문서 좌측 상단을 기준으로 한다
+                스크롤을 내리면 고정되어서 스크롤과 함께 따라간다
+            */
+            top: 60px;
+            left: 30px;
+            /*height: 120vh;*/
+        }
+    </style>
+</head>
+<body>
+<div class="box-container">
+    <div id="static-box">static</div>
+    <div id="relative-box">relative</div>
+    <div id="absolute-box">absolute</div>
+    <div id="fixed-box">fixed</div>
+
+</div>
+</body>
+</html>
